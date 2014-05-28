@@ -1,0 +1,39 @@
+#This file managed by puppet, do not edit.
+
+<%
+if @monitored_drives.respond_to?('split')
+		#Split string of drives returned on comma
+		drives_tmp = monitored_drives.split(',')
+		drives_tmp = drives_tmp.grep(/sd/)
+		drives_tmp.map! { |drive| "/dev/#{drive}" }
+		drives = drives_tmp.join(" ")
+	else
+		drives = monitored_drives.to_s
+	end
+-%>
+
+#This file managed by puppet, do not edit.
+HDDTEMP_NAME="<%= @binname %>"
+
+#Config file, should always be this file, why, suse, why?
+HDDTEMP_CFG="<%= @config %>"
+
+# hddtemp database of supported devices
+HDDTEMP_DB="<%= @drive_db %>"
+
+# Address hddtemp will listen on.
+HDDTEMP_ADDR="<%= @listen_addr %>"
+
+# port hddtemp will listen on.
+HDDTEMP_PORT="<%= @listen_port %>"
+
+#Devices to monitor
+DEVICE="<%= drives %>"
+
+<% if @use_syslog == true -%>
+# hddtemp command line options.
+HDDTEMP_ARGS="-d -S <%= @syslog_interval %> -f $HDDTEMP_DB -l $HDDTEMP_ADDR -p $HDDTEMP_PORT $DEVICE"
+<% else %>
+# hddtemp command line options.
+HDDTEMP_ARGS="-d -f $HDDTEMP_DB -l $HDDTEMP_ADDR -p $HDDTEMP_PORT $DEVICE"
+<% end %>

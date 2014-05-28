@@ -1,0 +1,19 @@
+#This file managed by puppet, do not edit.
+
+<%
+if @monitored_drives.respond_to?('split')
+		#Split string of drives returned on comma
+		drives_tmp = monitored_drives.split(',')
+		drives_tmp = drives_tmp.grep(/sd/)
+		drives_tmp.map! { |drive| "/dev/#{drive}" }
+		drives = drives_tmp.join(" ")
+	else
+		drives = monitored_drives.to_s
+	end
+-%>
+
+<% if @use_syslog == true -%>
+HDDTEMP_OPTIONS="-S <%= @syslog_interval %> -l <%= @listen_addr %> -p <%= @listen_port %> <%= drives %>"
+<% else %>
+HDDTEMP_OPTIONS="-l <%= @listen_addr %> -p <%= @listen_port %> <%= drives %>"
+<% end %>
