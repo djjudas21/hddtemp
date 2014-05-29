@@ -84,6 +84,9 @@ the wild I suggest an upgrade.
 
 Due to the init script in use in SLES 11 and other distros multiple erb templates are required.
 
+At this time automatic configuration makes no attempt to ignore USB devices and will add them as
+well. Some do present S.M.A.R.T. data and so are valid, but they would still be best ignored.
+
 # License
 
 [GPL v2](http://www.gnu.org/licenses/gpl-2.0.html)

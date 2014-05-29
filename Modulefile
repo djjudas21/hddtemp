@@ -1,10 +1,10 @@
 name    'brentschler-hddtemp'
-version '1.0.0'
+version '1.0.1'
 source 'https://github.com/phoenixv/hddtemp'
 author 'Bob Rentschler'
 license 'GPL v2'
 summary 'hddtemp configuration module.'
-description 'This module configures the hddtemp program according to spec.'
+description 'This module configures the hddtemp program in a semi-automatic manner, or via express settings.'
 project_page 'https://github.com/phoenixv/hddtemp'
 
 ## Add dependencies, if any:
