@@ -37,7 +37,7 @@ This module has been tested to work on the following systems with Puppet v3 and 
 
 *With traditional puppet node configuration:*
 
-```
+```ruby
 class { 'hddtemp':
   service_manage      => true,
   service_enable      => true,
@@ -51,7 +51,7 @@ class { 'hddtemp':
 
 *With heira:*
 
-```
+```yaml
 ---
 classes:
   - hddtemp
