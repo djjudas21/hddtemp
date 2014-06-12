@@ -3,12 +3,13 @@
 #### Table of Contents
 
 1. [Overview](#overview)
-2. [Dependencies](#dependencies)
-3. [Examples](#examples)
-4. [Parameters](#parameters)
-5. [Limitations](#limitations)
-6. [License](#license)
-7. [Development](#development)
+2. [Compatability](#Compatability)
+3. [Dependencies](#dependencies)
+4. [Examples](#examples)
+5. [Parameters](#parameters)
+6. [Limitations](#limitations)
+7. [License](#license)
+8. [Development](#development)
 
 
 # Overview
@@ -71,11 +72,13 @@ hddtemp::listen_port: '7634'
 All Parameters are optional, if no drives are specified the module will add all /dev/sd*
 devices to the list to be monitored. 
 
-- listen\_addr - Defaults to listening only on localhost.
-- listen\_port - Defaults to 7634
-- monitored\_drives - This must be specified as a comma seperated string. 'sda,sdb,sdc' 
-- use\_syslog: Defaults to false
-- syslog\_interval: Default 1800 (30 minutes) Time in seconds to log temps to syslog.
+|Variable | Default Value | Description |
+|:--------|:-------------:|:------------|
+| listen\_addr 		| localhost | IP Address to listen on for incoming connections. |
+| listen\_port 		| 7634		| Port to listen on. |
+| monitored\_drives | *none*	| This must be specified as a comma seperated string. 'sda,sdb,sdc' |
+| use\_syslog 		| false 	| Log temps to syslog periodically | 
+| syslog\_interval 	| 1800 | 1800 seconds (30 minutes) Time in seconds to log temps to syslog. |
 
 # Limitations
 
