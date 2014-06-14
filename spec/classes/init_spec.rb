@@ -1,7 +1,5 @@
 require 'spec_helper'
 describe 'hddtemp' do
- 
-  it { should contain_class('hddtemp') }
      
   describe 'config files' do
     context 'with default params on osfamily RedHat' do
@@ -12,6 +10,8 @@ describe 'hddtemp' do
         }
       end
 
+      it { should contain_class('hddtemp') }
+        
       it {
         should contain_file('hddtemp_config_file').with({
           'ensure'  => 'file',
@@ -30,7 +30,9 @@ describe 'hddtemp' do
             :lsbmajdistrelease => '5',
           }
         end
- 
+
+        it { should contain_class('hddtemp') }
+
         it {
           should contain_file('hddtemp_config_file').with({
             'ensure'  => 'file',
