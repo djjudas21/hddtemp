@@ -1,5 +1,8 @@
 # brentschler-hddtemp
 
+[![Build Status](
+https://api.travis-ci.org/phoenixv/hddtemp.png?branch=master)](https://travis-ci.org/phoenixv/hddtemp)
+
 #### Table of Contents
 
 1. [Overview](#overview)
