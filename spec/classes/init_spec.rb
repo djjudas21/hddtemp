@@ -26,8 +26,8 @@ describe 'hddtemp' do
       context 'with default params on osfamily SuSE' do
         let :facts do
           {
-            :osfamily          => 'RedHat',
-            :lsbmajdistrelease => '5',
+            :osfamily          => 'SuSE',
+            :lsbmajdistrelease => '11',
           }
         end
 
