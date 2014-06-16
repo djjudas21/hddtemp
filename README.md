@@ -26,7 +26,9 @@ This module is best used with heira and the "virtual_%{::is_virtual}" directive 
 
 ## Compatability
 
-This module has been tested to work on the following systems with Puppet v3 and facter 1.7
+Facter 1.7 or greater is required for this module to function.
+
+It has been tested to work with any puppet version gretaer than 3.0.x
 
 * Centos 6.x
 * SLES 11
