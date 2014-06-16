@@ -1,7 +1,6 @@
 require 'spec_helper'
 describe 'hddtemp' do
   
-  it { should compile.with_all_deps }
   it { should contain_service('hddtemp') }
 
   describe 'config files' do
