@@ -1,5 +1,5 @@
 name    'brentschler-hddtemp'
-version '1.0.1'
+version '1.0.2'
 source 'https://github.com/phoenixv/hddtemp'
 author 'Bob Rentschler'
 license 'GPL v2'
