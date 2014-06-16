@@ -28,10 +28,13 @@ This module is best used with heira and the "virtual_%{::is_virtual}" directive 
 
 Facter 1.7 or greater is required for this module to function.
 
-It has been tested to work with any puppet version gretaer than 3.0.x
+It has been tested to work with puppet versions 3.0.x and greater.
+
+It will work with puppet 2.7 but fails if ruby is >=2.0.0.
 
 * Centos 6.x
 * SLES 11
+* Fedora 18+
  
 ## Dependencies
 
