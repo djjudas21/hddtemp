@@ -32,6 +32,7 @@ It has been tested to work with puppet versions 3.0.x and greater.
 
 It will work with puppet 2.7 but fails if ruby is >=2.0.0.
 
+The module is known to work on the following distributions:
 * Centos 6.x
 * SLES 11
 * Fedora 18+
