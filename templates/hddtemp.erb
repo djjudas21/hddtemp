@@ -3,7 +3,7 @@
 <%
 if @monitored_drives.respond_to?('split')
 		#Split string of drives returned on comma
-		drives_tmp = monitored_drives.split(',')
+		drives_tmp = @monitored_drives.split(',')
 		drives_tmp = drives_tmp.grep(/sd/)
 		drives_tmp.map! { |drive| "/dev/#{drive}" }
 		drives = drives_tmp.join(" ")
