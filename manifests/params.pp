@@ -12,7 +12,7 @@ class hddtemp::params {
 
   case $::osfamily {
     'RedHat' : {
-      $package_name = ['hddtemp']
+      $package_name = 'hddtemp'
       $service_name = 'hddtemp'
       $config = '/etc/sysconfig/hddtemp'
       $config_template = 'hddtemp/hddtemp.erb'
@@ -22,7 +22,7 @@ class hddtemp::params {
       $hasrestart = true
     }
     'SuSE'   : {
-      $package_name = ['hddtemp']
+      $package_name = 'hddtemp'
       $service_name = 'hddtemp'
       $config = '/etc/sysconfig/hddtemp'
       $config_template = 'hddtemp/hddtemp-suse.erb'
