@@ -4,7 +4,7 @@ class hddtemp::service inherits hddtemp {
   }
 
   if $service_manage == true {
-    service { "$service_name":
+    service { $service_name:
       ensure     => $service_ensure,
       enable     => $service_enable,
       name       => $service_name,

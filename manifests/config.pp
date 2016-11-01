@@ -1,5 +1,5 @@
 class hddtemp::config inherits hddtemp {
-  file { hddtemp_config_file:
+  file { 'hddtemp_config_file':
     ensure  => file,
     path    => $config,
     owner   => 'root',
