@@ -1,5 +1,6 @@
+# Defaults for hddtemp config
 class hddtemp::params {
-  include 'stdlib'
+  include '::stdlib'
   $service_enable = true
   $service_ensure = 'running'
   $service_manage = true

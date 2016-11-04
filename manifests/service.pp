@@ -1,13 +1,14 @@
+# Manage hddtemp service
 class hddtemp::service inherits hddtemp {
-  if !($service_ensure in ['running', 'stopped']) {
+  if !($::hddtemp::service_ensure in ['running', 'stopped']) {
     fail('service_ensure parameter must be running or stopped')
   }
 
-  if $service_manage == true {
-    service { "$service_name":
-      ensure     => $service_ensure,
-      enable     => $service_enable,
-      name       => $service_name,
+  if $::hddtemp::service_manage == true {
+    service { $::hddtemp::service_name:
+      ensure     => $::hddtemp::service_ensure,
+      enable     => $::hddtemp::service_enable,
+      name       => $::hddtemp::service_name,
       hasstatus  => true,
       hasrestart => true,
     }

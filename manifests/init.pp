@@ -1,3 +1,4 @@
+# Base class to manage hddtemp
 class hddtemp (
   $service_enable   = $hddtemp::params::service_enable,
   $service_ensure   = $hddtemp::params::service_ensure,
