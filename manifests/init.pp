@@ -19,9 +19,9 @@ class hddtemp (
   validate_absolute_path($config, $drive_db)
   validate_string($service_ensure, $package_ensure, $binname, $monitored_drives)
 
-  anchor { 'hddtemp::begin': } ->
-  class { '::hddtemp::install': } ->
-  class { '::hddtemp::config': } ~>
-  class { '::hddtemp::service': } ->
-  anchor { 'hddtemp::end': }
+  anchor { 'hddtemp::begin': }
+  -> class { '::hddtemp::install': }
+  -> class { '::hddtemp::config': }
+  ~> class { '::hddtemp::service': }
+  -> anchor { 'hddtemp::end': }
 }
