@@ -1,4 +1,4 @@
-# brentschler-hddtemp
+# hddtemp
 
 [![Build Status](
 https://api.travis-ci.org/phoenixv/hddtemp.png?branch=master)](https://travis-ci.org/phoenixv/hddtemp)
@@ -105,10 +105,4 @@ well. Some do present S.M.A.R.T. data and so are valid, but they would still be 
 
 # Development
 
-Please [report issues](https://github.com/phoenixv/hddtemp) or [submit a pull request](https://github.com/phoenixv/hddtemp/pulls).
-
-Bug fixers and thanks to:
-
-[Jonathan](https://github.com/djjudas21)
-
- 
+Please [report issues](https://github.com/djjudas21/puppet-hddtemp) or [submit a pull request](https://github.com/djjudas21/puppet-hddtemp/pulls).

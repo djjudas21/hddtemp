@@ -1,7 +1,7 @@
 {
-  "name": "brentschler-hddtemp",
+  "name": "jgazeley-hddtemp",
   "version": "1.0.3",
-  "author": "Bob Rentschler",
+  "author": "Jonathan Gazeley",
   "license": "GPL v2",
   "source": "https://github.com/phoenixv/hddtemp",
   "project_page": "https://github.com/phoenixv/hddtemp",
