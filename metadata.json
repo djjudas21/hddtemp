@@ -2,12 +2,35 @@
   "name": "jgazeley-hddtemp",
   "version": "1.0.3",
   "author": "Jonathan Gazeley",
-  "license": "GPL v2",
-  "source": "https://github.com/phoenixv/hddtemp",
-  "project_page": "https://github.com/phoenixv/hddtemp",
+  "license": "GPL-v2",
+  "source": "https://github.com/djjudas21/puppet-hddtemp",
+  "project_page": "https://github.com/djjudas21/puppet-hddtemp",
   "summary": "hddtemp configuration module.",
   "description": "This module configures the hddtemp program in a semi-automatic manner, or via express settings.",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Fedora",
+      "operatingsystemrelease": [
+        "24",
+        "25",
+        "26"
+      ]
+    },
+    {
+      "operatingsystem": "OpenSuSE",
+      "operatingsystemrelease": [
+        "11"
+      ]
+    }
+  ],
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">3.0.0"}
+    {"name":"puppetlabs/stdlib","version_requirement":">= 3.0.0 < 5.0.0"}
   ]
 }
