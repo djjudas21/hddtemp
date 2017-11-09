@@ -1,1 +1,4 @@
-/.README.md.html
+*.swp
+pkg/
+spec/fixures/
+.gemfile.lock
