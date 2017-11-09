@@ -1,8 +1,5 @@
 # hddtemp
 
-[![Build Status](
-https://api.travis-ci.org/phoenixv/hddtemp.png?branch=master)](https://travis-ci.org/phoenixv/hddtemp)
-
 #### Table of Contents
 
 1. [Overview](#overview)
@@ -47,7 +44,7 @@ The module is known to work on the following distributions:
 
 *With traditional puppet node configuration:*
 
-```ruby
+```puppet
 class { 'hddtemp':
   service_manage      => true,
   service_enable      => true,
